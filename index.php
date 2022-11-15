@@ -1,21 +1,6 @@
 <?php include'header.php' ?>
 
     <div class="uk-container">
-
-<!--            <div class="uk-margin-top">-->
-<!--                <label for="sort"></label><select name="sort-by" id="sort" class="uk-select">Sort-->
-<!--                    <option value="0" selected class="uk-text-muted">Sort by...</option>-->
-<!--                    <option value="date_down">↓ Date Added</option>-->
-<!--                    <option value="date_up">↑ Date Added</option>-->
-<!--                    <option value="views_down">↓ Views</option>-->
-<!--                    <option value="views_up">↑ Views</option>-->
-<!--                    <option value="name_down">↓ Name (A-Z)</option>-->
-<!--                    <option value="name_up">↑ Name (Z-A)</option>-->
-<!--                    <option value="likes_down">↓ Likes count</option>-->
-<!--                    <option value="likes_up">↑ Likes count</option>-->
-<!--                </select>-->
-<!--            </div>-->
-
         <?php
             $sql = "SELECT id, name, added_by, desc_short, desc_full, time_added FROM main ORDER BY time_added desc LIMIT 3";
             $result = $conn->query($sql);
