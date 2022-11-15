@@ -1,3 +1,5 @@
+<?php $conn = null ?>
+
 <?php include'header.php' ?>
 
         <?php
@@ -21,5 +23,3 @@
 
 
     <?php include'footer.php' ?>
-</body>
-</html>
