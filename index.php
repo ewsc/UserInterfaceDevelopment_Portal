@@ -1,4 +1,7 @@
-<?php include'header.php' ?>
+<?php
+    $conn = null;
+    include'header.php';
+?>
 
     <div class="uk-container">
         <?php
