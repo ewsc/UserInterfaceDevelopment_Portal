@@ -1,4 +1,4 @@
-<footer class="uk-background-secondary uk-margin-medium-top">
+<footer class="uk-background-secondary">
     <div class="uk-text-center uk-padding-small">
         gthanksg, 2022
     </div>

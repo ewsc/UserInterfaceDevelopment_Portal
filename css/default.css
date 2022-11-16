@@ -3,10 +3,41 @@ body {
     background: #bfbfbf;
 }
 
+/*body{*/
+/*    min-height: 100vh;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+
+/*footer {*/
+/*    margin-top: auto;*/
+/*}*/
+
 .avatar-rounded {
     border-radius: 50%;
 }
 
 .long-input {
     width: 100%;
+}
+
+.custom-bg {
+    background: url("../res/back.jpg") no-repeat;
+    background-size: 2046px;
+    height: 100%;
+    width: 100%;
+}
+
+.custom-bg-info {
+    background: url("../res/back-info.jpg") no-repeat;
+    background-size: 2046px;
+    height: 100%;
+    width: 100%;
+}
+
+.bg-split {
+    background: url("../res/back_split.jpg") no-repeat;
+    background-size: 1024px;
+    height: 100%;
+    width: 50%;
 }
