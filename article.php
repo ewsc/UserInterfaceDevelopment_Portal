@@ -9,9 +9,9 @@
             $row = $result->fetch_assoc()
         ?>
 
-    <div class="uk-container uk-margin-top">
+    <div class="uk-container uk-margin-medium-bottom">
 
-        <h2 class="uk-margin-remove-bottom"><?php echo $row["name"] ?></h2>
+        <h2 class="uk-margin-remove-bottom uk-margin-large-top"><?php echo $row["name"] ?></h2>
         <?php $tempDate = new DateTime($row["time_added"]); ?>
         <p class="uk-margin-remove-top uk-margin-remove-bottom">by <?php echo $row["added_by"] ?>, <?php echo date_format($tempDate, "H:i, d.m.y") ?></p>
 

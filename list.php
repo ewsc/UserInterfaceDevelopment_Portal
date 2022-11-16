@@ -4,6 +4,7 @@
 ?>
 
 <div class="uk-container">
+    <h1 class="uk-margin-medium-top">list of all articles</h1>
     <?php
     $sql = "SELECT id, name, added_by, desc_short, desc_full, time_added FROM main ORDER BY time_added desc";
     $result = $conn->query($sql);
@@ -42,4 +43,6 @@
 
 </div>
 
-<?php include"footer.php" ?>
+<div class="uk-margin-medium-top">
+    <?php include"footer.php" ?>
+</div>

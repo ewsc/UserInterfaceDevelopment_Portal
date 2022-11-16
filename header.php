@@ -21,7 +21,7 @@
 
 <body>
 <header>
-    <div class="uk-position-top uk-padding uk-position-fixed" style="z-index: 20">
+    <div class="uk-position-top uk-padding uk-position-fixed menu-is-supreme">
         <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
             <div class="uk-navbar-right">
                 <ul class="uk-navbar-nav">
@@ -30,6 +30,7 @@
                         <div class="uk-navbar-dropdown">
                             <ul class="uk-nav uk-navbar-dropdown-nav">
                                 <li><a href="/">Home</a></li>
+                                <li><a href="/add.php">Add</a></li>
                                 <li><a href="/search.php">Search</a></li>
                                 <li><a href="/list.php?sort_by=date_up">List of all articles</a></li>
                                 <li><a href="/random_article.php">Random article</a></li>
