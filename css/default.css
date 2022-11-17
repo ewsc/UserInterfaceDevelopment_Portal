@@ -1,5 +1,9 @@
 body {
-    font-family: 'Rubik', sans-serif !important;
+    font-family: 'Nunito', sans-serif !important;
+    background: #bfbfbf;
+}
+
+.background-custom {
     background: #bfbfbf;
 }
 
@@ -20,6 +24,27 @@ body {
     background-size: 2046px;
     height: 100%;
     width: 100%;
+}
+
+.bg-list {
+    background-size: contain;
+    background: url("../res/back_list.jpg") no-repeat fixed;
+}
+
+.article-image-border {
+    border: 2px solid white;
+    border-radius: 1px;
+}
+
+.visible-box {
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #f8f8f8;
+    box-shadow: 0 0 7px 2px #222;
+}
+
+.width-full {
+    min-width: 100%;
 }
 
 .custom-bg-info {

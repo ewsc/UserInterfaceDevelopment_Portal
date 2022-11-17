@@ -1,10 +1,7 @@
 <?php
 
-    $servername = "projectrpi.io";
-    $username = "root";
-    $password = "";
-    $dbname = "projectrpi";
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    include"header.php";
+
 
     $name = $_POST["name"];
     $added_by = "guest";
@@ -25,4 +22,4 @@
     $conn->close();
 
 ?>
-<!--<meta http-equiv="Refresh" content="0; url='/list.php'" />-->
+<meta http-equiv="Refresh" content="0; url='/list.php'" />

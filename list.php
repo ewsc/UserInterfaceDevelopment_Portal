@@ -1,48 +1,67 @@
 <?php
-    $conn = null;
     include'header.php';
 ?>
 
-<div class="uk-container">
-    <h1 class="uk-margin-medium-top">list of all articles</h1>
-    <?php
-    $sql = "SELECT id, name, added_by, desc_short, desc_full, time_added FROM main ORDER BY time_added desc";
-    $result = $conn->query($sql);
+<div class="bg-list">
 
-    if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) { ?>
+    <div class="uk-container background-custom">
 
-    <article class="uk-comment uk-comment-primary uk-margin-medium-top">
-        <header class="uk-comment-header">
-            <div class="uk-grid-medium uk-flex-middle" uk-grid>
-                <div class="uk-width-auto">
-                    <span uk-icon="icon: users; ratio: 2;" class="uk-comment-avatar"></span>
-                </div>
-                <div class="uk-width-expand">
-                    <div class="uk-width-expand">
-                        <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#"><?php echo $row["name"]?></a></h4>
-                        <?php $tempDate = new DateTime($row["time_added"]); ?>
-                        <p class="uk-comment-meta uk-margin-remove"><?php echo date_format($tempDate, "H:i, d.m.y") ?></p>
-                        <p class="uk-comment-meta uk-margin-remove-top">by <i><a class="uk-link-heading"><?php echo $row["added_by"]?></a></i></p>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <div class="uk-comment-body">
-            <p><?php echo $row["desc_short"]?></p>
-            <div class="uk-text-right">
-                <a href="/article.php?id=<?php echo $row["id"] ?>" class="uk-link-heading">Read more...</a>
-            </div>
+        <div class="uk-margin-medium-left">
+            <h1 class="uk-margin-medium-top uk-text-light">list of all articles</h1>
         </div>
-    </article>
 
-    <?php
-     }
-    }
-    ?>
+        <?php
+        if ($_GET) {
+            if ($_GET["sort_by"] == "name_up") {
+                $sql = "SELECT id, name, added_by, desc_short, desc_full, time_added FROM main ORDER BY name asc";
+            } elseif ($_GET["sort_by"] == "name_down") {
+                $sql = "SELECT id, name, added_by, desc_short, desc_full, time_added FROM main ORDER BY name desc";
+            } elseif ($_GET["sort_by"] == "date_up") {
+                $sql = "SELECT id, name, added_by, desc_short, desc_full, time_added FROM main ORDER BY time_added asc";
+            } elseif ($_GET["sort_by"] == "date_down") {
+                $sql = "SELECT id, name, added_by, desc_short, desc_full, time_added FROM main ORDER BY time_added desc";
+            } elseif ($_GET["sort_by"] == "author_down") {
+                $sql = "SELECT id, name, added_by, desc_short, desc_full, time_added FROM main ORDER BY added_by desc";
+            } elseif ($_GET["sort_by"] == "author_up") {
+                $sql = "SELECT id, name, added_by, desc_short, desc_full, time_added FROM main ORDER BY added_by asc";
+            } else {
+                $sql = "SELECT id, name, added_by, desc_short, desc_full, time_added FROM main ORDER BY time_added desc";
+            }
+        }
+        else {
+            $sql = "SELECT id, name, added_by, desc_short, desc_full, time_added FROM main ORDER BY time_added desc";
+        }
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) { ?>
+
+        <?php $tempDate = new DateTime($row["time_added"]); ?>
+        <div class="uk-card uk-card-body uk-card-default uk-margin-bottom">
+            <article class="uk-article">
+                <h2 class="uk-article-title uk-margin-remove-bottom"><a class="uk-link-reset" href=""><?php echo $row["name"]?></a></h2>
+                <p class="uk-article-meta uk-margin-remove-top">by <i><a href="#"><?php echo $row["added_by"]?></a></i> on <?php echo date_format($tempDate, "H:i, d.m.y") ?></p>
+                <p class="uk-text-lead"><?php echo $row["desc_short"] ?></p>
+                <a class="uk-button uk-button-text" href="/article.php?id=<?php echo $row["id"] ?>">Read more</a>
+            </article>
+        </div>
+        <?php
+         }
+        }
+        ?>
+
+        <select name="" id="" class="uk-select uk-margin-bottom" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+            <option value="#" selected disabled>Sort by...</option>
+            <option value="/list.php?sort_by=date_up">↑ Date</option>
+            <option value="/list.php?sort_by=date_down">↓ Date</option>
+            <option value="/list.php?sort_by=author_up">↑ Author</option>
+            <option value="/list.php?sort_by=author_down">↓ Author</option>
+            <option value="/list.php?sort_by=name_up">↑ Name</option>
+            <option value="/list.php?sort_by=name_down">↓ Name</option>
+        </select>
+
+    </div>
 
 </div>
 
-<div class="uk-margin-medium-top">
     <?php include"footer.php" ?>
-</div>

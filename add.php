@@ -9,17 +9,17 @@
         <hr>
         <label>
             <h3>Input name</h3>
-            <input type="text" class="uk-input uk-width-1-1" required placeholder="Input name..." name="name" value="">
+            <input type="text" class="uk-input uk-width-1-1" required placeholder="Input name..." name="name" value="" title="Accept numbers and letters only">
         </label>
         <hr>
         <label>
             <h3>Give a short description</h3>
-            <textarea type="text" class="uk-input uk-width-1-1" required rows="3" cols="6" maxlength="200" placeholder="Give a short description..."  name="desc_short"></textarea>
+            <textarea type="text" class="uk-input uk-width-1-1 width-full" required rows="3" cols="6" maxlength="500" placeholder="Give a short description..."  name="desc_short" title="Accept numbers and letters only"></textarea>
         </label>
         <hr>
         <label>
             <h3>Give a full description</h3>
-            <textarea type="text" class="uk-textarea uk-width-1-1" required rows="7" cols="6" maxlength="3000" placeholder="Give a full description..."  name="desc_full"></textarea>
+            <textarea type="text" class="uk-textarea uk-width-1-1 width-full" required rows="7" cols="6" maxlength="3000" placeholder="Give a full description..."  name="desc_full" title="Accept numbers and letters only"></textarea>
         </label>
         <hr>
         <label>
@@ -29,7 +29,7 @@
         <hr>
         <label>
             <h3>Youtube Link</h3>
-            <input type="url" class="uk-input uk-width-1-2" required placeholder="Youtube link..."  name="link">
+            <input type="url" class="uk-input uk-width-1-2" placeholder="Youtube link..."  name="link">
         </label>
         <hr>
         <div class="uk-margin-medium-bottom uk-align-right">
