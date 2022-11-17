@@ -4,11 +4,21 @@
 
 <div class="bg-list">
 
-    <div class="uk-container background-custom">
+    <div class="uk-container background-custom uk-height-1-1">
 
         <div class="uk-margin-medium-left">
             <h1 class="uk-margin-medium-top uk-text-light">list of all articles</h1>
         </div>
+
+        <select name="" id="" class="uk-select uk-margin-bottom" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+            <option value="#" selected disabled>Sort by...</option>
+            <option value="/list.php?sort_by=date_up">↑ Date</option>
+            <option value="/list.php?sort_by=date_down">↓ Date</option>
+            <option value="/list.php?sort_by=author_up">↑ Author</option>
+            <option value="/list.php?sort_by=author_down">↓ Author</option>
+            <option value="/list.php?sort_by=name_up">↑ Name</option>
+            <option value="/list.php?sort_by=name_down">↓ Name</option>
+        </select>
 
         <?php
         if ($_GET) {
@@ -50,15 +60,6 @@
         }
         ?>
 
-        <select name="" id="" class="uk-select uk-margin-bottom" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
-            <option value="#" selected disabled>Sort by...</option>
-            <option value="/list.php?sort_by=date_up">↑ Date</option>
-            <option value="/list.php?sort_by=date_down">↓ Date</option>
-            <option value="/list.php?sort_by=author_up">↑ Author</option>
-            <option value="/list.php?sort_by=author_down">↓ Author</option>
-            <option value="/list.php?sort_by=name_up">↑ Name</option>
-            <option value="/list.php?sort_by=name_down">↓ Name</option>
-        </select>
 
     </div>
 

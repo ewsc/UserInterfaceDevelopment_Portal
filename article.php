@@ -10,7 +10,7 @@
             $tempDate = new DateTime($row["time_added"]);
         ?>
 
-    <div class="uk-container uk-margin-medium-bottom">
+    <div class="uk-container uk-margin-medium-bottom  uk-height-1-1">
         <article class="uk-article uk-margin-medium-top">
             <h1 class="uk-article-title uk-margin-remove-bottom"><a class="uk-link-reset" href=""><?php echo $row["name"] ?></a></h1>
             <p class="uk-article-meta uk-margin-remove-top">added by <i><a href="#"><?php echo $row["added_by"] ?></a></i>, on <?php echo date_format($tempDate, "H:i, d.m.y") ?>.</p>
