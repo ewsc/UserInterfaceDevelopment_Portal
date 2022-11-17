@@ -22,25 +22,21 @@
 
 <body>
 <header>
-    <div class="uk-position-top uk-padding uk-position-fixed menu-is-supreme">
-        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-            <div class="uk-navbar-right">
-                <ul class="uk-navbar-nav">
-                    <li class="uk-active visible-box">
-                        <a class="uk-navbar-toggle uk-navbar-toggle-animate" uk-navbar-toggle-icon="ratio: 2;" href="#"></a>
-                        <div class="uk-navbar-dropdown">
-                            <ul class="uk-nav uk-navbar-dropdown-nav">
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/add.php">Add</a></li>
-                                <li><a href="/search.php">Search</a></li>
-                                <li><a href="/list.php?sort_by=date_up">List of all articles</a></li>
-                                <li><a href="/random_article.php">Random article</a></li>
-                                <li><a href="/about.php">About</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <div class="uk-position-fixed uk-position-right uk-padding menu-is-supreme">
+        <a href="#menu" class="uk-icon-button uk-margin-small-right uk-background-secondary" uk-icon="menu" uk-toggle=""></a>
+    </div>
+
+    <div id="menu" uk-offcanvas="mode: push; flip: true;">
+        <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <ul class="uk-list">
+                <li><a href="/"><span uk-icon="home"></span><span class="uk-margin-small-left">Home</span></a></li>
+                <li><a href="/add.php"><span uk-icon="plus"></span><span class="uk-margin-small-left">Add</span></a></li>
+                <li><a href="/search.php"><span uk-icon="search"></span><span class="uk-margin-small-left">Search</span></a></li>
+                <li><a href="/list.php"><span uk-icon="list"></span><span class="uk-margin-small-left">List of all articles</span></a></li>
+                <li><a href="/random_article.php"><span uk-icon="tiktok"></span><span class="uk-margin-small-left">Random article</span></a></li>
+                <li><a href="/about.php"><span uk-icon="users"></span><span class="uk-margin-small-left">About</span></a></li>
+            </ul>
+        </div>
     </div>
 </header>
