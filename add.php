@@ -19,7 +19,7 @@
         <hr>
         <label>
             <h3>Give a full description</h3>
-            <textarea type="text" class="uk-textarea uk-width-1-1 width-full" required rows="8" cols="6" maxlength="3000" placeholder="Give a full description..."  name="desc_full" title="Accept numbers and letters only"></textarea>
+            <textarea type="text" class="uk-textarea uk-width-1-1 width-full" required rows="8" cols="6" maxlength="10000" placeholder="Give a full description..."  name="desc_full" title="Accept numbers and letters only"></textarea>
         </label>
         <hr>
         <label>

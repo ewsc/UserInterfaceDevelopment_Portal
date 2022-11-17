@@ -3,6 +3,11 @@ body {
     background: #bfbfbf;
 }
 
+.sp-height {
+    min-height: 100vh;
+    height: auto;
+}
+
 .background-custom {
     background: #bfbfbf;
 }
@@ -59,4 +64,12 @@ body {
     background-size: 1920px;
     height: 100%;
     width: 50%;
+}
+
+.img-size {
+    display: block;
+    max-height: 400px;
+    max-width: 50%;
+    width: auto;
+    height: auto;
 }

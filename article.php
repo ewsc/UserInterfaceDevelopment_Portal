@@ -10,15 +10,15 @@
             $tempDate = new DateTime($row["time_added"]);
         ?>
 
-    <div class="uk-container uk-margin-medium-bottom">
+    <div class="uk-container uk-margin-medium-bottom sp-height">
         <article class="uk-article uk-margin-medium-top">
             <h1 class="uk-article-title uk-margin-remove-bottom"><a class="uk-link-reset" href=""><?php echo $row["name"] ?></a></h1>
             <p class="uk-article-meta uk-margin-remove-top">added by <i><a href="#"><?php echo $row["added_by"] ?></a></i>, on <?php echo date_format($tempDate, "H:i, d.m.y") ?>.</p>
             <?php if($row["image"] != null) {?>
-            <img class="uk-align-left uk-margin-remove-adjacent article-image-border uk-width-1-2" src="res/article_files/<?php echo $row["image"] ?>.jpg">
+            <img class="uk-align-left uk-margin-remove-adjacent article-image-border img-size" src="res/article_files/<?php echo $row["image"] ?>.jpg">
             <?php } ?>
             <p class="uk-text-lead"><?php echo $row["desc_short"] ?></p>
-            <p><?php echo $row["desc_full"] ?></p>
+            <p class="uk-text-justify"><?php echo $row["desc_full"] ?></p>
         </article>
 
         <?php if($row["link"] != null) {?>
@@ -53,7 +53,7 @@
                 <hr>
                 <label>
                     <h3>Give a full description</h3>
-                    <textarea type="text" class="uk-textarea uk-width-1-1 width-full" required rows="7" cols="6" maxlength="3000" placeholder="Give a full description..."  name="desc_full" title="Accept numbers and letters only"><?php echo $row["desc_full"] ?></textarea>
+                    <textarea type="text" class="uk-textarea uk-width-1-1 width-full" required rows="7" cols="6" maxlength="10000" placeholder="Give a full description..."  name="desc_full" title="Accept numbers and letters only"><?php echo $row["desc_full"] ?></textarea>
                 </label>
                 <hr>
                 <label>

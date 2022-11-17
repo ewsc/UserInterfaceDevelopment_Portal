@@ -10,7 +10,11 @@
     $image_file = $_FILES["image"];
     $link = $_POST["link"];
     $newName = time();
-    move_uploaded_file($image_file["tmp_name"], __DIR__ . "/res/article_files/".$newName.".jpg");
+    move_uploaded_file($image_file["tmp_name"], __DIR__ . "/res/article_files/" . $newName . ".jpg");
+
+    if (!file_exists("__DIR__ . '/res/article_files/' . $newName . '.jpg'")) {
+        $newName = null;
+    }
 
     $sql = "INSERT INTO main (name, added_by, desc_short, desc_full, image, link) VALUES ('$name', '$added_by', '$desc_short', '$desc_full', '$newName', '$link')";
 

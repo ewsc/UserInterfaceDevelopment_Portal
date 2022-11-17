@@ -4,7 +4,7 @@
 
 <div class="bg-list">
 
-    <div class="uk-container background-custom uk-height-1-1">
+    <div class="uk-container background-custom sp-height">
 
         <div class="uk-margin-medium-left">
             <h1 class="uk-margin-medium-top uk-text-light">list of all articles</h1>

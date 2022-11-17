@@ -3,7 +3,7 @@
     $query = $_GET["query"];
 ?>
 
-<div class="uk-container uk-height-1-1">
+<div class="uk-container sp-height">
 
     <h2 class="uk-margin-medium-top">Search results for query <i><?php echo $_GET["query"] ?></i></h2>
 
