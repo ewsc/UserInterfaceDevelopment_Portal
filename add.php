@@ -14,12 +14,12 @@
         <hr>
         <label>
             <h3>Give a short description</h3>
-            <textarea type="text" class="uk-input uk-width-1-1 width-full" required rows="5" cols="6" maxlength="500" placeholder="Give a short description..."  name="desc_short" title="Accept numbers and letters only"></textarea>
+            <textarea type="text" class="uk-textarea uk-width-1-1 width-full" required rows="5" cols="6" maxlength="500" placeholder="Give a short description..."  name="desc_short" title="Accept numbers and letters only"></textarea>
         </label>
         <hr>
         <label>
             <h3>Give a full description</h3>
-            <textarea type="text" class="uk-textarea uk-width-1-1 width-full" required rows="8" cols="6" maxlength="10000" placeholder="Give a full description..."  name="desc_full" title="Accept numbers and letters only"></textarea>
+            <textarea id="area" type="text" class="uk-textarea uk-width-1-1 width-full" required rows="8" cols="6" maxlength="10000" placeholder="Give a full description..."  name="desc_full" title="Accept numbers and letters only"></textarea>
         </label>
         <hr>
         <label>
@@ -39,5 +39,6 @@
         </div>
     </form>
 </div>
+
 
 <?php include"footer.php" ?>
