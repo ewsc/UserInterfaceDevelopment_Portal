@@ -18,7 +18,7 @@
             <img class="uk-align-left uk-margin-remove-adjacent article-image-border img-size" src="res/article_files/<?php echo $row["image"] ?>.jpg">
             <?php } ?>
             <p class="uk-text-lead"><?php echo $row["desc_short"] ?></p>
-            <p class="uk-text-justify"><?php echo $row["desc_full"] ?></p>
+            <p class="uk-text-justify"><?php echo nl2br(htmlspecialchars($row["desc_full"]),  false)?></p>
         </article>
 
         <?php if($row["link"] != null) {?>
