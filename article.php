@@ -10,7 +10,8 @@
             $tempDate = new DateTime($row["time_added"]);
         ?>
 
-    <div class="uk-container uk-margin-medium-bottom sp-height">
+<div class="bg-list">
+    <div class="uk-container background-custom uk-margin-medium-bottom sp-height">
         <article class="uk-article uk-margin-medium-top">
             <h1 class="uk-article-title uk-margin-remove-bottom"><a class="uk-link-reset" href=""><?php echo $row["name"] ?></a></h1>
             <p class="uk-article-meta uk-margin-remove-top">added by <i><a href="#"><?php echo $row["added_by"] ?></a></i>, on <?php echo date_format($tempDate, "H:i, d.m.y") ?>.</p>
@@ -86,5 +87,7 @@
             </p>
         </div>
     </div>
+
+</div>
 
     <?php include'footer.php' ?>

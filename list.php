@@ -4,10 +4,10 @@
 
 <div class="bg-list">
 
-    <div class="uk-container background-custom sp-height">
+    <div class="uk-container uk-padding-large background-custom sp-height">
 
         <div class="uk-margin-medium-left">
-            <h1 class="uk-margin-medium-top uk-text-light">list of all articles</h1>
+            <h1 class="uk-text-light">list of all articles</h1>
         </div>
 
         <select name="" id="" class="uk-select uk-margin-bottom" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
