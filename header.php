@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Writers.</title>
@@ -34,8 +35,6 @@
                 <li><a href="/add.php"><span uk-icon="plus"></span><span class="uk-margin-small-left">Add</span></a></li>
                 <li><a href="/search.php"><span uk-icon="search"></span><span class="uk-margin-small-left">Search</span></a></li>
                 <li><a href="/list.php"><span uk-icon="list"></span><span class="uk-margin-small-left">List of all articles</span></a></li>
-                <li><a href="/random.php"><span uk-icon="crosshairs"></span><span class="uk-margin-small-left">Random article</span></a></li>
-                <li><a href="/about.php"><span uk-icon="users"></span><span class="uk-margin-small-left">About</span></a></li>
             </ul>
         </div>
     </div>
