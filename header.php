@@ -23,19 +23,14 @@
 
 <body>
 <header id="top">
-    <div class="uk-position-fixed uk-position-left uk-padding menu-is-supreme">
-        <a href="#menu" class="uk-icon-button uk-margin-small-right uk-background-secondary" uk-icon="menu" uk-toggle=""></a>
-    </div>
-
-    <div id="menu" uk-offcanvas="mode: push; flip: false;">
-        <div class="uk-offcanvas-bar">
-            <button class="uk-offcanvas-close" type="button" uk-close></button>
-            <ul class="uk-list">
-                <li><a href="/"><span uk-icon="home"></span><span class="uk-margin-small-left">Home</span></a></li>
-                <li><a href="/add.php"><span uk-icon="plus"></span><span class="uk-margin-small-left">Add</span></a></li>
-                <li><a href="/search.php"><span uk-icon="search"></span><span class="uk-margin-small-left">Search</span></a></li>
-                <li><a href="/list.php"><span uk-icon="list"></span><span class="uk-margin-small-left">List of all articles</span></a></li>
+    <nav class="uk-navbar-container" uk-navbar>
+        <div class="uk-navbar-center">
+            <ul class="uk-navbar-nav">
+                <li><a href="/" class="uk-active"><span class="uk-margin-small-left">Home</span></a></li>
+                <li><a href="/add.php"><span class="uk-margin-small-left">Add</span></a></li>
+                <li><a href="/search.php"><span class="uk-margin-small-left">Search</span></a></li>
+                <li><a href="/list.php"><span class="uk-margin-small-left">All articles</span></a></li>
             </ul>
         </div>
-    </div>
+    </nav>
 </header>

@@ -10,6 +10,8 @@ $row = $result->fetch_assoc();
 $tempDate = new DateTime($row["time_added"]);
 ?>
 
+
+
 <div class="sp-height uk-margin-medium-bottom">
 
     <section>
@@ -21,6 +23,19 @@ $tempDate = new DateTime($row["time_added"]);
     <hr class="uk-divider-icon">
 
     <section>
+
+        <script>
+            window.onscroll = function() {myFunction()};
+
+            function myFunction() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("progressbar").value = scrolled;
+            }
+        </script>
+
+
         <div class="uk-container">
             <h2 class="uk-margin-remove-bottom"><?php echo $row["name"] ?></h2>
             <p class="uk-article-meta uk-margin-remove-top uk-margin-remove-bottom">Added by <i><a href="#"><?php echo $row["added_by"] ?></a></i>, on <?php echo date_format($tempDate, "H:i, d.m.y") ?>.</p>
@@ -42,7 +57,11 @@ $tempDate = new DateTime($row["time_added"]);
                     </div>
                 </div>
             <?php } ?>
-            <p class="uk-margin-top"><?php echo nl2br(htmlspecialchars($row["desc_full"]),  false)?></p>
+
+
+            <div>
+                <p class="uk-margin-top"><?php echo nl2br(htmlspecialchars($row["desc_full"]),  false)?></p>
+            </div>
         </div>
     </section>
 

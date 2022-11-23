@@ -82,3 +82,8 @@ body {
     width: auto;
     height: auto;
 }
+
+.rotated {
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
