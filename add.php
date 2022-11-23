@@ -29,7 +29,7 @@
         <hr>
         <label>
             <h3>Youtube Link</h3>
-            <input type="url" class="uk-input uk-width-1-2" placeholder="Youtube link..."  name="link">
+            <input type="text" class="uk-input uk-width-1-2" placeholder="Youtube video ID..."  name="link">
         </label>
         <hr>
         <div class="uk-margin-medium-bottom uk-align-right">

@@ -11,7 +11,7 @@ $tempDate = new DateTime($row["time_added"]);
 ?>
 <section>
     <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="res/back_one.jpg" uk-img>
-        <h1 class="text-shadow">Everything about writers.</h1>
+        <h1 class="text-shadow">Everything about writers</h1>
     </div>
 </section>
 
@@ -89,6 +89,46 @@ $tempDate = new DateTime($row["time_added"]);
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="uk-padding">
+        <div class="uk-text-center">
+            <h3>About us</h3>
+        </div>
+        <div class="uk-flex uk-flex-center uk-flex-middle">
+            <div class="uk-card uk-card-default uk-card-hover">
+                <div class="uk-card-header">
+                    <img class="uk-comment-avatar avatar-rounded uk-margin-small-right" src="res/user_files/guslya.jpg" width="50" height="50" alt=""> Azam Alamov
+                </div>
+                <div class="uk-card-body">
+                    CEO, lead programmer & designer.
+                </div>
+                <div class="uk-card-footer">
+                    <div class="uk-text-center">
+                        <a class="uk-button uk-button-text" href="https://github.com/gthanksg">GitHub</a>
+                        <a class="uk-button uk-button-text uk-margin-left" href="https://linkedin.com/in/azam-alamov">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="uk-card uk-card-default uk-card-hover uk-margin-left">
+                <div class="uk-card-header">
+                    <img class="uk-comment-avatar avatar-rounded uk-margin-small-right" src="res/user_files/serj.jpg" width="50" height="50" alt=""> Zaur Rustamov
+                </div>
+                <div class="uk-card-body">
+                    Head of Communications
+                </div>
+                <div class="uk-card-footer">
+                    <div class="uk-text-center">
+                        <a class="uk-button uk-button-text" href="https://github.com/gthanksg">GitHub</a>
+                        <a class="uk-button uk-button-text uk-margin-left" href="https://linkedin.com/in/azam-alamov">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>

@@ -19,4 +19,4 @@ $conn->close();
 
 ?>
 
-<meta http-equiv="Refresh" content="0; url='/list.php'" />
+<meta http-equiv="Refresh" content="0; url='/article.php?id=<?php echo "$id" ?>'" />

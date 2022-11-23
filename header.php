@@ -22,12 +22,12 @@
 ?>
 
 <body>
-<header>
-    <div class="uk-position-fixed uk-position-right uk-padding menu-is-supreme">
+<header id="top">
+    <div class="uk-position-fixed uk-position-left uk-padding menu-is-supreme">
         <a href="#menu" class="uk-icon-button uk-margin-small-right uk-background-secondary" uk-icon="menu" uk-toggle=""></a>
     </div>
 
-    <div id="menu" uk-offcanvas="mode: push; flip: true;">
+    <div id="menu" uk-offcanvas="mode: push; flip: false;">
         <div class="uk-offcanvas-bar">
             <button class="uk-offcanvas-close" type="button" uk-close></button>
             <ul class="uk-list">

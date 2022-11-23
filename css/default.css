@@ -28,13 +28,6 @@ body {
     z-index: 999;
 }
 
-.custom-bg {
-    background: url("../res/back.jpg") no-repeat;
-    background-size: 2046px;
-    height: 100%;
-    width: 100%;
-}
-
 .bg-search {
     background-size: cover;
     background: url("../res/search.jpg") no-repeat fixed;
@@ -45,8 +38,16 @@ body {
 }
 
 .article-image-border {
-    border: 2px solid white;
+    border: 2px solid grey;
     border-radius: 1px;
+}
+
+.bw-filter {
+    filter: grayscale(1);
+}
+
+.icon-color {
+    background: #e5e5e5;
 }
 
 .visible-box {
@@ -77,7 +78,7 @@ body {
 .img-size {
     display: block;
     max-height: 400px;
-    max-width: 50%;
+    min-width: 50%;
     width: auto;
     height: auto;
 }
