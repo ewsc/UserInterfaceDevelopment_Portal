@@ -21,7 +21,21 @@
     $conn = new mysqli($servername, $username, $password, $dbname);
 ?>
 
+<script>
+    window.onload = function() {
+        let preloader = document.getElementById('preloader');
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 1000);
+    }
+</script>
+
 <body>
+
+<div class="preloader" id="preloader">
+    <div uk-spinner="ratio: 3"></div>
+</div>
+
 <header id="top">
     <nav class="uk-navbar-container important-dark" uk-navbar="mode: click">
         <div class="uk-navbar-center">

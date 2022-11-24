@@ -59,7 +59,7 @@ $tempDate = new DateTime($row["time_added"]);
             <li>
                 <a class="uk-accordion-title" href="#"><h2>YouTube video</h2></a>
                 <div class="uk-accordion-content">
-                    <div class="">
+                    <div class="uk-flex uk-flex-center">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $row["link"] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
