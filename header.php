@@ -23,12 +23,21 @@
 
 <body>
 <header id="top">
-    <nav class="uk-navbar-container" uk-navbar>
+    <nav class="uk-navbar-container important-dark" uk-navbar="mode: click">
         <div class="uk-navbar-center">
             <ul class="uk-navbar-nav">
                 <li><a href="/" class="uk-active"><span class="uk-margin-small-left">Home</span></a></li>
                 <li><a href="/add.php"><span class="uk-margin-small-left">Add</span></a></li>
-                <li><a href="/search.php"><span class="uk-margin-small-left">Search</span></a></li>
+                <li class="uk-inline">
+                    <a href="#"><span class="uk-margin-small-left">Search</span></a>
+                    <div class="uk-dropbar uk-dropbar-top" uk-drop="animation: slide-top; animate-out: true; duration: 700; mode: click">
+                        <form class="uk-search uk-search-default" action="results.php" method="get">
+                            <span class="uk-search-icon-flip" uk-search-icon></span>
+                            <input class="uk-search-input" type="search" placeholder="Search" aria-label="Search" name="query">
+                        </form>
+                    </div>
+
+                </li>
                 <li><a href="/list.php"><span class="uk-margin-small-left">All articles</span></a></li>
             </ul>
         </div>

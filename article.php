@@ -4,7 +4,7 @@
 
 <?php
 $reqID = $_GET["id"];
-$sql = "SELECT id, name, added_by, desc_short, desc_full, image, link, time_added FROM main WHERE id = $reqID";
+$sql = "SELECT id, name, added_by, desc_short, desc_full, image, link, date_arr, action_arr, time_added FROM main WHERE id = $reqID";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 $tempDate = new DateTime($row["time_added"]);
@@ -23,19 +23,6 @@ $tempDate = new DateTime($row["time_added"]);
     <hr class="uk-divider-icon">
 
     <section>
-
-        <script>
-            window.onscroll = function() {myFunction()};
-
-            function myFunction() {
-                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                var scrolled = (winScroll / height) * 100;
-                document.getElementById("progressbar").value = scrolled;
-            }
-        </script>
-
-
         <div class="uk-container">
             <h2 class="uk-margin-remove-bottom"><?php echo $row["name"] ?></h2>
             <p class="uk-article-meta uk-margin-remove-top uk-margin-remove-bottom">Added by <i><a href="#"><?php echo $row["added_by"] ?></a></i>, on <?php echo date_format($tempDate, "H:i, d.m.y") ?>.</p>
@@ -65,12 +52,47 @@ $tempDate = new DateTime($row["time_added"]);
         </div>
     </section>
 
-    <?php if($row["link"] != null) {?>
-        <hr class="uk-divider-icon">
-        <div class="uk-flex uk-flex-center">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $row["link"] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    <?php } ?>
+    <div class="uk-container uk-margin-medium-top">
+        <ul uk-accordion="multiple: true">
+
+        <?php if($row["link"] != null) {?>
+            <li>
+                <a class="uk-accordion-title" href="#"><h2>YouTube video</h2></a>
+                <div class="uk-accordion-content">
+                    <div class="">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $row["link"] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </li>
+        <?php } ?>
+
+
+        <?php if($row["date_arr"] != null)  { ?>
+            <?php $years = explode(" ", $row["date_arr"]); ?>
+            <?php $actions = explode("/", $row["action_arr"]); ?>
+
+            <li>
+                <a class="uk-accordion-title" href="#"><h2>Timeline</h2></a>
+                <div class="uk-accordion-content">
+                    <div class="uk-container">
+                        <div class="timeline">
+                            <?php array_map(function ($year, $action) { ?>
+                            <div class="container right">
+                                <div class="uk-card-default uk-card-hover uk-card uk-card-body">
+                                    <h2><?php echo $year ?></h2>
+                                    <p><?php echo $action ?></p>
+                                </div>
+                            </div>
+                            <?php }, $years, $actions ); ?>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        <?php } ?>
+
+        </ul>
+    </div>
 
 </div>
 
@@ -81,17 +103,27 @@ $tempDate = new DateTime($row["time_added"]);
             <hr>
             <label>
                 <h3>Input name</h3>
-                <input type="text" class="uk-input uk-width-1-1" required placeholder="Input name..." name="name" value="<?php echo $row["name"] ?>" title="Accept numbers and letters only">
+                <input type="text" class="uk-input uk-width-1-1" required placeholder="Input name..." name="name" value="<?php echo $row["name"] ?>">
             </label>
             <hr>
             <label>
                 <h3>Give a short description</h3>
-                <textarea type="text" class="uk-input uk-width-1-1 width-full" required rows="3" cols="6" maxlength="500" placeholder="Give a short description..."  name="desc_short" title="Accept numbers and letters only"><?php echo $row["desc_short"] ?></textarea>
+                <textarea type="text" class="uk-input uk-width-1-1 width-full" required rows="3" cols="6" maxlength="500" placeholder="Give a short description..."  name="desc_short"><?php echo $row["desc_short"] ?></textarea>
             </label>
             <hr>
             <label>
                 <h3>Give a full description</h3>
-                <textarea type="text" class="uk-textarea uk-width-1-1 width-full" required rows="7" cols="6" maxlength="10000" placeholder="Give a full description..."  name="desc_full" title="Accept numbers and letters only"><?php echo $row["desc_full"] ?></textarea>
+                <textarea type="text" class="uk-textarea uk-width-1-1 width-full" required rows="7" cols="6" maxlength="10000" placeholder="Give a full description..."  name="desc_full"><?php echo $row["desc_full"] ?></textarea>
+            </label>
+            <hr>
+            <label>
+                <h3>(Timeline) Input years, separated with single space</h3>
+                <textarea type="text" class="uk-textarea uk-width-1-1 width-full" rows="5" cols="6" maxlength="500" placeholder="Give a short description..."  name="years" ><?php echo $row["date_arr"] ?></textarea>
+            </label>
+            <hr>
+            <label>
+                <h3>(Timeline) Input actions, happened in that years, separated with single slash ("/")</h3>
+                <textarea type="text" class="uk-textarea uk-width-1-1 width-full" rows="5" cols="6" maxlength="500" placeholder="Give a short description..."  name="actions"><?php echo $row["action_arr"] ?></textarea>
             </label>
             <hr>
             <label>
