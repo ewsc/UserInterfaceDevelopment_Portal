@@ -54,10 +54,10 @@
 
                 </li>
                 <li><a href="/list.php" id="header-articles"><span class="uk-margin-small-left">All articles</span></a></li>
-                <li>
+                <li class="uk-inline">
                     <a href="#" id="header-language">Language</a>
-                    <div class="uk-navbar-dropdown">
-                        <label for="get-lang"></label><select id="get-lang" class="uk-select">
+                    <div class="uk-dropbar uk-dropbar-top" uk-drop="animation: slide-top; animate-out: true; duration: 700; mode: click">
+                        <select id="get-lang" class="uk-select">
                             <option value="en">
                                 English (Default)
                             </option>
