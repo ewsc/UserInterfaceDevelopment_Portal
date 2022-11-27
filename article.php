@@ -25,9 +25,9 @@ $tempDate = new DateTime($row["time_added"]);
     <section>
         <div class="uk-container">
             <h2 class="uk-margin-remove-bottom"><?php echo $row["name"] ?></h2>
-            <p class="uk-article-meta uk-margin-remove-top uk-margin-remove-bottom">Added by <i><a href="#"><?php echo $row["added_by"] ?></a></i>, on <?php echo date_format($tempDate, "H:i, d.m.y") ?>.</p>
+            <p class="uk-article-meta uk-margin-remove-top uk-margin-remove-bottom"><span id="added-by">added by</span> <i><a href="#"><?php echo $row["added_by"] ?></a></i>, <span id="added-on">on</span> <?php echo date_format($tempDate, "H:i, d.m.y") ?>.</p>
             <div class="uk-margin-small-top uk-dark">
-                <a href="" class="uk-icon-button uk-margin-small-right icon-color" uk-icon="pencil" uk-tooltip="Edit" uk-toggle="target: #edit_modal"></a>
+                <a href="" class="uk-icon-button uk-margin-small-right icon-color" id="article-edit" uk-icon="pencil" uk-tooltip="Edit" uk-toggle="target: #edit_modal"></a>
                 <a href="" class="uk-icon-button uk-margin-small-right icon-color" uk-icon="trash" uk-tooltip="Delete" uk-toggle="target: #delete_modal"></a>
             </div>
             <p class="uk-text-lead"><?php echo $row["desc_short"] ?></p>
@@ -57,7 +57,7 @@ $tempDate = new DateTime($row["time_added"]);
 
         <?php if($row["link"] != null) {?>
             <li>
-                <a class="uk-accordion-title" href="#"><h2>YouTube video</h2></a>
+                <a class="uk-accordion-title" href="#"><h2 id="article-ytvid">YouTube video</h2></a>
                 <div class="uk-accordion-content">
                     <div class="uk-flex uk-flex-center">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $row["link"] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -72,7 +72,7 @@ $tempDate = new DateTime($row["time_added"]);
             <?php $actions = explode("/", $row["action_arr"]); ?>
 
             <li>
-                <a class="uk-accordion-title" href="#"><h2>Timeline</h2></a>
+                <a class="uk-accordion-title" href="#"><h2 id="article-timeline">Timeline</h2></a>
                 <div class="uk-accordion-content">
                     <div class="uk-container">
                         <div class="timeline">

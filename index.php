@@ -11,7 +11,7 @@ $tempDate = new DateTime($row["time_added"]);
 ?>
 <section>
     <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="res/back_one.jpg" uk-img>
-        <h1 class="text-shadow">Everything about writers</h1>
+        <h1 class="text-shadow" id="index-header">Everything about writers</h1>
     </div>
 </section>
 
@@ -20,13 +20,13 @@ $tempDate = new DateTime($row["time_added"]);
         <div class="uk-width-1-2">
             <div class="uk-card uk-card-default uk-card-body uk-card-hover">
                 <div class="uk-card-header">
-                    <h2>From the creators</h2>
+                    <h2 id="index-message">From the creators</h2>
                 </div>
-                <p>How often, while reading a book, did you wonder about the author?
+                <p id="index-message-text">How often, while reading a book, did you wonder about the author?
                     What inspired him, how did he live? On this site we have tried
                     everything about the author's life to supplement your knowledge.
                     The list is updated daily by many people, and you can also contribute
-                    to the development of our site. <i>Enjoy reading!</i></p>
+                    to the development of our site. Enjoy reading!</p>
             </div>
         </div>
 
@@ -38,22 +38,22 @@ $tempDate = new DateTime($row["time_added"]);
                     <li>
                         <img src="res/back_three.jpg" alt="" uk-cover>
                         <div class="uk-position-center-left uk-position-small uk-text-left uk-margin-large-left">
-                            <h2 uk-slideshow-parallax="x: 100,-100" class="uk-margin-remove-bottom">Discover</h2>
-                            <p uk-slideshow-parallax="x: 200,-200" class="uk-margin-remove-top">new biographies daily</p>
+                            <h2 uk-slideshow-parallax="x: 100,-100" class="uk-margin-remove-bottom" id="index-motivate-header-1">Discover</h2>
+                            <p uk-slideshow-parallax="x: 200,-200" class="uk-margin-remove-top" id="index-motivate-text-1">new biographies daily</p>
                         </div>
                     </li>
                     <li>
                         <img src="res/back_four.jpg" alt="" uk-cover>
                         <div class="uk-position-center-right uk-position-small uk-text-right uk-margin-large-right">
-                            <h2 uk-slideshow-parallax="x: 100,-100" class="uk-margin-remove-bottom">Get inspired</h2>
-                            <p uk-slideshow-parallax="x: 200,-200" class="uk-margin-remove-top">and start doing miracles</p>
+                            <h2 uk-slideshow-parallax="x: 100,-100" class="uk-margin-remove-bottom" id="index-motivate-header-2">Get inspired</h2>
+                            <p uk-slideshow-parallax="x: 200,-200" class="uk-margin-remove-top" id="index-motivate-text-2">and start doing miracles</p>
                         </div>
                     </li>
                     <li>
                         <img src="res/back_five.jpg" alt="" uk-cover>
                         <div class="uk-position-center uk-position-small uk-text-center">
-                            <h2 uk-slideshow-parallax="x: 100,-100" class="uk-margin-remove-bottom">Learn</h2>
-                            <p uk-slideshow-parallax="x: 200,-200" class="uk-margin-remove-top">and never stop</p>
+                            <h2 uk-slideshow-parallax="x: 100,-100" class="uk-margin-remove-bottom" id="index-motivate-header-3">Learn</h2>
+                            <p uk-slideshow-parallax="x: 200,-200" class="uk-margin-remove-top" id="index-motivate-text-3">and never stop</p>
                         </div>
                     </li>
                 </ul>
@@ -68,7 +68,7 @@ $tempDate = new DateTime($row["time_added"]);
             <div class="uk-width-2-3">
                 <div class="">
                     <div class="uk-card uk-card-hover uk-card-default uk-card-body uk-text-center">
-                        <h2 class=""><span uk-icon="icon: bookmark; ratio: 2;" class="uk-margin-small-right"></span>Person of the day</h2>
+                        <h2 class=""><span uk-icon="icon: bookmark; ratio: 2;" class="uk-margin-small-right"></span><span id="header-pod">Person of the day</span></h2>
                     </div>
                 </div>
 
@@ -80,11 +80,11 @@ $tempDate = new DateTime($row["time_added"]);
                         <div class="uk-card-body">
                             <p class="uk-text-lead"><?php echo $row["desc_short"] ?></p>
                             <div class="uk-text-right">
-                                <a class="uk-button uk-button-text" href="/article.php?id=<?php echo $row["id"] ?>">Read more</a>
+                                <a class="uk-button uk-button-text" href="/article.php?id=<?php echo $row["id"] ?>" id="readmore">Read more</a>
                             </div>
                         </div>
                         <div class="uk-card-footer">
-                            <p class="uk-article-meta">added by <i><a href="#"><?php echo $row["added_by"]?></a></i> on <?php echo date_format($tempDate, "H:i, d.m.y") ?></p>
+                            <p class="uk-article-meta"><span id="added-by">added by</span> <i><a href="#"><?php echo $row["added_by"]?></a></i> <span id="added-on">on</span> <?php echo date_format($tempDate, "H:i, d.m.y") ?></p>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@ $tempDate = new DateTime($row["time_added"]);
 <section>
     <div class="uk-padding">
         <div class="uk-text-center">
-            <h3>About us</h3>
+            <h3 id="header-about-us">About us</h3>
         </div>
         <div class="uk-flex uk-flex-center uk-flex-middle">
             <div class="uk-card uk-card-default uk-card-hover">
@@ -104,7 +104,7 @@ $tempDate = new DateTime($row["time_added"]);
                     <img class="uk-comment-avatar avatar-rounded uk-margin-small-right" src="res/user_files/guslya.jpg" width="50" height="50" alt=""> Azam Alamov
                 </div>
                 <div class="uk-card-body">
-                    CEO, lead programmer & designer.
+                    <span id="about-1">CEO, lead programmer & designer</span>
                 </div>
                 <div class="uk-card-footer">
                     <div class="uk-text-center">
@@ -119,7 +119,7 @@ $tempDate = new DateTime($row["time_added"]);
                     <img class="uk-comment-avatar avatar-rounded uk-margin-small-right" src="res/user_files/serj.jpg" width="50" height="50" alt=""> Zaur Rustamov
                 </div>
                 <div class="uk-card-body">
-                    Head of Communications
+                    <span id="about-2">Head of Communications</span>
                 </div>
                 <div class="uk-card-footer">
                     <div class="uk-text-center">

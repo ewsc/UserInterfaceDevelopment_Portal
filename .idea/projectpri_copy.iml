@@ -8,5 +8,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="i18next" level="application" />
+    <orderEntry type="library" name="multi-language" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
   </component>
 </module>

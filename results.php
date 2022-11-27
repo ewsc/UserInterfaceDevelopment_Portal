@@ -4,7 +4,7 @@
 ?>
 
 <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="res/search.jpg" uk-img style="background-attachment: fixed">
-    <h1 class="text-shadow">Search results</h1>
+    <h1 class="text-shadow" id="results-header">Search results</h1>
 </div>
 
 <div class="uk-container uk-margin-top sp-height">

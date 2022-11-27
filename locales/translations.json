@@ -1,0 +1,302 @@
+[
+  {
+    "id":"index-header",
+    "langs":
+    {
+      "en":"Everything about writers",
+      "ru":"Все о писателях",
+      "de":"Alles über Schriftsteller"
+    }
+  },
+
+  {
+    "id":"header-language",
+    "langs":
+    {
+      "en":"Language",
+      "ru":"Язык",
+      "de":"Sprache"
+    }
+  },
+
+  {
+    "id":"header-articles",
+    "langs":
+    {
+      "en":"All articles",
+      "ru":"Все статьи",
+      "de":"Alle Artikel"
+    }
+  },
+
+  {
+    "id":"header-home",
+    "langs":
+    {
+      "en":"Home",
+      "ru":"На главную",
+      "de":"Zur Hauptseite"
+    }
+  },
+
+  {
+    "id":"header-search",
+    "langs":
+    {
+      "en":"Search",
+      "ru":"Поиск",
+      "de":"Suche"
+    }
+  },
+
+  {
+    "id":"header-add",
+    "langs":
+    {
+      "en":"Add",
+      "ru":"Добавить",
+      "de":"Neue hinzufügen"
+    }
+  },
+
+  {
+    "id":"header-search",
+    "attr":
+    {
+      "placeholder":
+      {
+        "en":"Search",
+        "ru":"Поиск",
+        "de":"Suche"
+      }
+    }
+  },
+
+  {
+    "id":"index-message",
+    "langs":
+    {
+      "en":"From the creators",
+      "ru":"От создателей",
+      "de":"Von den Machern"
+      }
+  },
+
+  {
+    "id":"index-message-text",
+    "langs":
+    {
+      "en":"How often, while reading a book, did you wonder about the author? What inspired him, how did he live? On this site we have tried everything about the author's life to supplement your knowledge. The list is updated daily by many people, and you can also contribute to the development of our site. Enjoy reading!",
+      "ru":"Как часто, читая книгу, вы задумывались об авторе? Что его вдохновляло, как он жил? На этом сайте мы перепробовали все о жизни автора, чтобы дополнить ваши знания. Список ежедневно обновляется многими людьми, и вы также можете внести свой вклад в развитие нашего сайта. Наслаждайся чтением!",
+      "de":"Wie oft haben Sie sich beim Lesen eines Buches Gedanken über den Autor gemacht? Was hat ihn inspiriert, wie hat er gelebt? Auf dieser Seite haben wir alles über das Leben des Autors versucht, um Ihr Wissen zu ergänzen. Die Liste wird täglich von vielen Personen aktualisiert, und Sie können auch zur Entwicklung unserer Website beitragen. Viel Spaß beim Lesen!"
+    }
+  },
+
+  {
+    "id":"index-motivate-header-1",
+    "langs":
+    {
+      "en":"Discover",
+      "ru":"Изучай",
+      "de":"Entdecken"
+    }
+  },
+
+  {
+    "id":"index-motivate-text-1",
+    "langs":
+    {
+      "en":"new biographies daily",
+      "ru":"новые биографии ежедневно",
+      "de":"täglich neue Biographien"
+    }
+  },
+
+  {
+    "id":"index-motivate-header-2",
+    "langs":
+    {
+      "en":"Get inspired",
+      "ru":"Вдохновляйся",
+      "de":"Lass dich inspirieren"
+    }
+  },
+
+  {
+    "id":"index-motivate-text-2",
+    "langs":
+    {
+      "en":"and start doing miracles",
+      "ru":"и начни творить чудеса",
+      "de":"und fange an Wunder zu tun"
+    }
+  },
+
+  {
+    "id":"index-motivate-header-3",
+    "langs":
+    {
+      "en":"Learn",
+      "ru":"Учись",
+      "de":"Lernen"
+    }
+  },
+
+  {
+    "id":"index-motivate-text-3",
+    "langs":
+    {
+      "en":"and never stop",
+      "ru":"и никогда не останавливайся",
+      "de":"und nie aufhören"
+    }
+  },
+
+  {
+    "id":"header-pod",
+    "langs":
+    {
+      "en":"Person of the day",
+      "ru":"Деятель дня",
+      "de":"Person des Tages"
+    }
+  },
+
+  {
+    "id":"added-by",
+    "langs":
+    {
+      "en":"added by",
+      "ru":"добавил",
+      "de":"hinzugefügt von"
+    }
+  },
+
+  {
+    "id":"article-timeline",
+    "langs":
+    {
+      "en":"Timeline",
+      "ru":"Таймлайн",
+      "de":"Zeitleiste"
+    }
+  },
+
+  {
+    "id":"article-edit",
+    "attr":
+    {
+      "uk-tooltip":
+      {
+        "en":"Edit",
+        "ru":"Редактировать",
+        "de":"Bearbeiten"
+      }
+    }
+  },
+
+  {
+    "id":"article-ytvid",
+    "langs":
+    {
+      "en":"YouTube video",
+      "ru":"YouTube видео",
+      "de":"YouTube-Video"
+    }
+  },
+
+
+
+  {
+    "id":"article-delete",
+    "attr":
+    {
+      "uk-tooltip":
+      {
+        "en":"Delete",
+        "ru":"Удалить",
+        "de":"Löschen"
+      }
+    }
+  },
+
+  {
+    "id":"added-on",
+    "langs":
+    {
+      "en":"on",
+      "ru":"",
+      "de":"am"
+    }
+  },
+
+  {
+    "id":"results-header",
+    "langs":
+    {
+      "en":"Search results",
+      "ru":"Результаты поиска",
+      "de":"Suchergebnisse"
+    }
+  },
+
+  {
+    "id":"readmore",
+    "langs":
+    {
+      "en":"Read more",
+      "ru":"Читать далее",
+      "de":"Weiterlesen"
+    }
+  },
+
+  {
+    "id":"header-about-us",
+    "langs":
+    {
+      "en":"About us",
+      "ru":"О нас",
+      "de":"Über uns"
+    }
+  },
+
+  {
+    "id":"about-1",
+    "langs":
+    {
+      "en":"CEO, lead programmer & designer",
+      "ru":"Основатель, ведущий программист и дизайнер",
+      "de":"CEO, leitender Programmierer und Designer"
+    }
+  },
+
+  {
+    "id":"about-2",
+    "langs":
+    {
+      "en":"Head of Communications",
+      "ru":"Начальник отдела коммуникаций",
+      "de":"Leiter Kommunikation"
+    }
+  },
+
+  {
+    "id": "footer-totop",
+    "langs": {
+      "en": "to top",
+      "ru": "наверх",
+      "de": "nach oben"
+    }
+  },
+
+  {
+    "id":"list-header",
+    "langs":
+    {
+      "en":"List of all articles",
+      "ru":"Список всех статей",
+      "de":"Liste aller Artikel"
+    }
+  }
+]
+
