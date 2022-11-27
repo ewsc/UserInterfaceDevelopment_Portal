@@ -48,7 +48,7 @@
                     <div class="uk-dropbar uk-dropbar-top" uk-drop="animation: slide-top; animate-out: true; duration: 700; mode: click">
                         <form class="uk-search uk-search-default" action="results.php" method="get">
                             <span class="uk-search-icon-flip" uk-search-icon></span>
-                            <input class="uk-search-input" type="search" placeholder="Search" id="header-search" aria-label="Search" name="query">
+                            <input class="uk-search-input" type="search" placeholder="Search" id="header-search-text" aria-label="Search" name="query">
                         </form>
                     </div>
 
@@ -61,7 +61,7 @@
                             <option value="en">
                                 English (Default)
                             </option>
-                            <option value="de">
+                            <option value="de" onclick="play()">
                                 Deutsche
                             </option>
                             <option value="ru">
@@ -74,3 +74,11 @@
         </div>
     </nav>
 </header>
+
+<script>
+    function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+    }
+</script>
+<audio id="audio" src="audio/sound.mp3"></audio>
