@@ -11,9 +11,18 @@ $tempDate = new DateTime($row["time_added"]);
 ?>
 <section>
     <div class="uk-height-large uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="res/back_one.jpg" uk-img>
-        <h1 class="text-shadow" id="index-header">Everything about writers</h1>
+        <h1 id="index-header" class="text-shadow"></h1>
     </div>
 </section>
+
+<script type="text/babel">
+    function PrintHeader() {
+        return <h1>Everything about writers</h1>;
+    }
+
+    ReactDOM.render(<PrintHeader />, document.getElementById('index-header'))
+</script>
+
 
 <section>
     <div class="uk-flex uk-padding uk-flex-middle">

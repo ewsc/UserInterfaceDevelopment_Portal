@@ -11,5 +11,7 @@
     <orderEntry type="library" name="i18next" level="application" />
     <orderEntry type="library" name="multi-language" level="application" />
     <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="react" level="application" />
+    <orderEntry type="library" name="react-dom" level="application" />
   </component>
 </module>

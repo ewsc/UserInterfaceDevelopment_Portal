@@ -21,6 +21,5 @@
     xhr.send()
 </script>
 
-
 </body>
 </html>
