@@ -36,6 +36,7 @@
 
     <?php
     $result = $conn->query($sql);
+    $counter = 0;
 
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) { ?>
@@ -51,7 +52,9 @@
             <a class="uk-button uk-button-text" href="/article.php?id=<?php echo $row["id"] ?>" id="readmore">Read more</a>
         </div>
     </div>
+
     <?php
+            $counter++;
         }
     }
     ?>

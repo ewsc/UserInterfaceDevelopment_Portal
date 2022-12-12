@@ -58,13 +58,13 @@
                     <a href="#" id="header-language">Language</a>
                     <div class="uk-dropbar uk-dropbar-top" uk-drop="animation: slide-top; animate-out: true; duration: 700; mode: click">
                         <select id="get-lang" class="uk-select">
-                            <option value="en">
+                            <option value="en" onclick="UIkit.notification({message: 'Language changed.', pos: 'top-right'})">
                                 English (Default)
                             </option>
-                            <option value="de" onclick="play()">
+                            <option value="de" onclick="play();UIkit.notification({message: 'Sprache geändert.', pos: 'top-right'})">
                                 Deutsche
                             </option>
-                            <option value="ru">
+                            <option value="ru" onclick="UIkit.notification({message: 'Язык сменен.', pos: 'top-right'})">
                                 Русский
                             </option>
                         </select>
