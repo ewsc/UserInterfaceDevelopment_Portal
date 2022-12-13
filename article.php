@@ -58,7 +58,7 @@ $tempDate = new DateTime($row["time_added"]);
         <?php if($row["link"] != null) {?>
             <li>
                 <a class="uk-accordion-title" href="#"><h2 id="article-ytvid">YouTube video</h2></a>
-                <div class="uk-accordion-content">
+                <div class="uk-accordion-content uk-container">
                     <div class="uk-flex uk-flex-center">
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $row["link"] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
@@ -95,15 +95,12 @@ $tempDate = new DateTime($row["time_added"]);
 
             <li>
                 <a class="uk-accordion-title" href="#"><h2 id="article-map">Map</h2></a>
-                <div class="uk-accordion-content">
-                    <div class="uk-flex uk-flex-center">
+                <div class="uk-accordion-content uk-container">
+                    <div class="uk-flex uk-flex-center@l">
                         <div class="mapouter">
                             <div class="gmap_canvas">
-                                <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=<?php echo $row["map_loc"] ?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                <iframe class="" id="gmap_canvas" src="https://maps.google.com/maps?q=<?php echo $row["map_loc"] ?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="width: 100%; height: 100%;"></iframe>
                                 <a href="https://123movies-to.org"></a><br>
-                                <style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style>
-                                <a href="https://www.embedgooglemap.net">embed google maps in wordpress</a>
-                                <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
                             </div>
                             </div>
                     </div>

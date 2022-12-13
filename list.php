@@ -43,7 +43,7 @@
 
     <?php $tempDate = new DateTime($row["time_added"]); ?>
 
-    <div class="uk-width-1-3">
+    <div class="uk-width-1-3@l">
         <div class="uk-card uk-card-body uk-card-default uk-margin-bottom">
             <h3 class="uk-margin-remove-bottom"><a class="uk-link-reset" href=""><?php echo $row["name"]?></a></h3>
             <p class="uk-text-meta uk-margin-remove-top"><span id="added-by">added by</span> <i><a href="#"><?php echo $row["added_by"]?></a></i> <span id="added-on">on</span> <?php echo date_format($tempDate, "H:i, d.m.y") ?></p>
