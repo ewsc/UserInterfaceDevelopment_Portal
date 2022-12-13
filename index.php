@@ -128,11 +128,11 @@ $tempDate = new DateTime($row["time_added"]);
                     <img class="uk-comment-avatar avatar-rounded uk-margin-small-right" src="res/user_files/serj.jpg" width="50" height="50" alt=""> Zaur Rustamov
                 </div>
                 <div class="uk-card-body">
-                    <span id="about-2">Head of Communications</span>
+                    <span id="about-2">Programmer and designer</span>
                 </div>
                 <div class="uk-card-footer">
                     <div class="uk-text-center">
-                        <a class="uk-button uk-button-text" href="https://github.com/gthanksg">GitHub</a>
+                        <a class="uk-button uk-button-text" href="https://github.com/zaurazer">GitHub</a>
                         <a class="uk-button uk-button-text uk-margin-left" href="https://linkedin.com/in/azam-alamov">LinkedIn</a>
                     </div>
                 </div>
