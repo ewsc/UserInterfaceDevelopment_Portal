@@ -11,51 +11,66 @@
 
   {
     "id":"header-language",
-    "langs":
+    "attr":
     {
-      "en":"Language",
-      "ru":"Язык",
-      "de":"Sprache"
+      "uk-tooltip":
+      {
+        "en":"Language",
+        "ru":"Язык",
+        "de":"Sprache"
+      }
     }
   },
 
   {
     "id":"header-articles",
-    "langs":
+    "attr":
     {
-      "en":"All articles",
-      "ru":"Все статьи",
-      "de":"Alle Artikel"
+      "uk-tooltip":
+      {
+        "en":"All articles",
+        "ru":"Все статьи",
+        "de":"Alle Artikel"
+      }
     }
   },
 
   {
     "id":"header-home",
-    "langs":
+    "attr":
     {
-      "en":"Home",
-      "ru":"На главную",
-      "de":"Zur Hauptseite"
+      "uk-tooltip":
+      {
+        "en":"Home",
+        "ru":"На главную",
+        "de":"Zur Hauptseite"
+      }
     }
   },
 
   {
     "id":"header-search",
-    "langs":
+    "attr":
     {
-      "en":"Search",
-      "ru":"Поиск",
-      "de":"Suche"
+      "uk-tooltip":
+      {
+        "en":"Search",
+        "ru":"Поиск",
+        "de":"Suche"
+      }
     }
   },
 
   {
     "id":"header-add",
-    "langs":
+    "attr":
     {
-      "en":"Add",
-      "ru":"Добавить",
-      "de":"Neue hinzufügen"
+      "uk-tooltip":
+      {
+        "en":"Add",
+        "ru":"Добавить",
+        "de":"Neue hinzufügen"
+      }
     }
   },
 

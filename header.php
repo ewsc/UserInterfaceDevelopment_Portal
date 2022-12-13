@@ -16,6 +16,7 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
     <?php
@@ -45,10 +46,10 @@
     <nav class="uk-navbar-container important-dark" uk-navbar="mode: click">
         <div class="uk-navbar-center">
             <ul class="uk-navbar-nav">
-                <li><a href="/" class="uk-active" id="header-home"><span class="uk-margin-small-left">Home</span></a></li>
-                <li><a href="/add.php" id="header-add"><span class="uk-margin-small-left">Add</span></a></li>
+                <li><a href="/" class="uk-active" id="header-home"><span class="uk-margin-small-left"><span uk-icon="home"</span></span></a></li>
+                <li><a href="/add.php" id="header-add"><span class="uk-margin-small-left"><span uk-icon="plus"></span></span></a></li>
                 <li class="uk-inline">
-                    <a href="#" id="header-search"><span class="uk-margin-small-left">Search</span></a>
+                    <a href="#" id="header-search"><span class="uk-margin-small-left"><span uk-icon="search"></span></span></a>
                     <div class="uk-dropbar uk-dropbar-top" uk-drop="animation: slide-top; animate-out: true; duration: 700; mode: click">
                         <form class="uk-search uk-search-default" action="results.php" method="get">
                             <span class="uk-search-icon-flip" uk-search-icon></span>
@@ -57,9 +58,9 @@
                     </div>
 
                 </li>
-                <li><a href="/list.php" id="header-articles"><span class="uk-margin-small-left">All articles</span></a></li>
+                <li><a href="/list.php" id="header-articles"><span class="uk-margin-small-left"><span uk-icon="thumbnails"></span></span></a></li>
                 <li class="uk-inline">
-                    <a href="#" id="header-language">Language</a>
+                    <a href="#" id="header-language"><span uk-icon="world"></span></a>
                     <div class="uk-dropbar uk-dropbar-top" uk-drop="animation: slide-top; animate-out: true; duration: 700; mode: click">
                         <select id="get-lang" class="uk-select">
                             <option value="en" onclick="UIkit.notification({message: 'Language changed.', pos: 'top-right'})">
@@ -78,11 +79,3 @@
         </div>
     </nav>
 </header>
-
-<script>
-    function play() {
-        var audio = document.getElementById("audio");
-        audio.play();
-    }
-</script>
-<audio id="audio" src="audio/sound.mp3"></audio>

@@ -25,8 +25,8 @@ $tempDate = new DateTime($row["time_added"]);
 
 
 <section>
-    <div class="uk-flex uk-padding uk-flex-middle">
-        <div class="uk-width-1-2">
+    <div class="uk-padding uk-flex-middle uk-flex-center@l" uk-grid>
+        <div class="uk-width-1-2@l">
             <div class="uk-card uk-card-default uk-card-body uk-card-hover">
                 <div class="uk-card-header">
                     <h2 id="index-message">From the creators</h2>
@@ -39,9 +39,7 @@ $tempDate = new DateTime($row["time_added"]);
             </div>
         </div>
 
-        <hr class="uk-divider-vertical uk-margin-right uk-margin-left">
-
-        <div class="uk-width-1-2 uk-cover-container">
+        <div class="uk-width-1-2@l uk-cover-container">
             <div class="uk-position-relative uk-visible-toggle uk-dark" tabindex="-1" uk-slideshow="animation: push; autoplay: true; autoplay-interval: 4500;">
                 <ul class="uk-slideshow-items">
                     <li>
@@ -74,7 +72,7 @@ $tempDate = new DateTime($row["time_added"]);
 <section>
     <div class="uk-height-1-1 uk-background-cover" data-src="res/back_two.jpg" uk-img>
         <div class="uk-flex uk-flex-center uk-flex-middle uk-padding">
-            <div class="uk-width-2-3">
+            <div class="uk-width-2-3@l">
                 <div class="">
                     <div class="uk-card uk-card-hover uk-card-default uk-card-body uk-text-center">
                         <h2 class=""><span uk-icon="icon: bookmark; ratio: 2;" class="uk-margin-small-right"></span><span id="header-pod">Person of the day</span></h2>
@@ -103,12 +101,14 @@ $tempDate = new DateTime($row["time_added"]);
 </section>
 
 <section>
-    <div class="uk-padding">
+    <div class="uk-container uk-padding">
         <div class="uk-text-center">
             <h3 id="header-about-us">About us</h3>
         </div>
-        <div class="uk-flex uk-flex-center uk-flex-middle">
-            <div class="uk-card uk-card-default uk-card-hover">
+
+        <div class="uk-flex-center@l uk-flex-middle uk-grid-medium" uk-grid>
+
+            <div class="uk-card uk-card-default uk-card-hover uk-width-1-3@l">
                 <div class="uk-card-header">
                     <img class="uk-comment-avatar avatar-rounded uk-margin-small-right" src="res/user_files/guslya.jpg" width="50" height="50" alt=""> Azam Alamov
                 </div>
@@ -123,7 +123,7 @@ $tempDate = new DateTime($row["time_added"]);
                 </div>
             </div>
 
-            <div class="uk-card uk-card-default uk-card-hover uk-margin-left">
+            <div class="uk-card uk-card-default uk-card-hover uk-width-1-3@l uk-margin-left">
                 <div class="uk-card-header">
                     <img class="uk-comment-avatar avatar-rounded uk-margin-small-right" src="res/user_files/serj.jpg" width="50" height="50" alt=""> Zaur Rustamov
                 </div>
