@@ -183,6 +183,16 @@
   },
 
   {
+    "id":"article-map",
+    "langs":
+    {
+      "en":"Map",
+      "ru":"Карта",
+      "de":"Karte"
+    }
+  },
+
+  {
     "id":"article-edit",
     "attr":
     {
@@ -191,6 +201,19 @@
         "en":"Edit",
         "ru":"Редактировать",
         "de":"Bearbeiten"
+      }
+    }
+  },
+
+  {
+    "id":"article-delete",
+    "attr":
+    {
+      "uk-tooltip":
+      {
+        "en":"Delete",
+        "ru":"Удалить",
+        "de":"Löschen"
       }
     }
   },

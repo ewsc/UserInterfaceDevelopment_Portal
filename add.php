@@ -37,10 +37,17 @@
             <textarea type="text" class="uk-textarea uk-width-1-1 width-full" rows="5" cols="6" maxlength="500" placeholder="Give a short description..."  name="actions"></textarea>
         </label>
         <hr>
-        <label>
-            <h3>Youtube Link</h3>
-            <input type="text" class="uk-input uk-width-1-2" placeholder="Youtube video ID..."  name="link">
-        </label>
+        <div class="uk-flex uk-width-1-1">
+            <label>
+                <h3>Youtube Link</h3>
+                <input type="text" class="uk-input uk-width-large" placeholder="Youtube video ID..."  name="link">
+            </label>
+
+            <label class="uk-margin-left">
+                <h3>Location name</h3>
+                <input type="text" class="uk-input uk-width-large" placeholder="Give a location name..."  name="map_loc">
+            </label>
+        </div>
         <hr>
         <div class="uk-margin-medium-bottom uk-align-right">
             <button type="submit" class="uk-button uk-button-secondary uk-button-body">

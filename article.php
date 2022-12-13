@@ -4,7 +4,7 @@
 
 <?php
 $reqID = $_GET["id"];
-$sql = "SELECT id, name, added_by, desc_short, desc_full, image, link, date_arr, action_arr, time_added FROM main WHERE id = $reqID";
+$sql = "SELECT id, name, added_by, desc_short, desc_full, image, link, map_loc, date_arr, action_arr, time_added FROM main WHERE id = $reqID";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 $tempDate = new DateTime($row["time_added"]);
@@ -28,7 +28,7 @@ $tempDate = new DateTime($row["time_added"]);
             <p class="uk-article-meta uk-margin-remove-top uk-margin-remove-bottom"><span id="added-by">added by</span> <i><a href="#"><?php echo $row["added_by"] ?></a></i>, <span id="added-on">on</span> <?php echo date_format($tempDate, "H:i, d.m.y") ?>.</p>
             <div class="uk-margin-small-top uk-dark">
                 <a href="" class="uk-icon-button uk-margin-small-right icon-color" id="article-edit" uk-icon="pencil" uk-tooltip="Edit" uk-toggle="target: #edit_modal"></a>
-                <a href="" class="uk-icon-button uk-margin-small-right icon-color" uk-icon="trash" uk-tooltip="Delete" uk-toggle="target: #delete_modal"></a>
+                <a href="" class="uk-icon-button uk-margin-small-right icon-color" id="article_delete" uk-icon="trash" uk-tooltip="Delete" uk-toggle="target: #delete_modal"></a>
             </div>
             <p class="uk-text-lead"><?php echo $row["desc_short"] ?></p>
 
@@ -91,6 +91,27 @@ $tempDate = new DateTime($row["time_added"]);
 
         <?php } ?>
 
+        <?php if($row["map_loc"] != null)  { ?>
+
+            <li>
+                <a class="uk-accordion-title" href="#"><h2 id="article-map">Map</h2></a>
+                <div class="uk-accordion-content">
+                    <div class="uk-flex uk-flex-center">
+                        <div class="mapouter">
+                            <div class="gmap_canvas">
+                                <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=<?php echo $row["map_loc"] ?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                <a href="https://123movies-to.org"></a><br>
+                                <style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}</style>
+                                <a href="https://www.embedgooglemap.net">embed google maps in wordpress</a>
+                                <style>.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style>
+                            </div>
+                            </div>
+                    </div>
+                </div>
+            </li>
+
+        <?php } ?>
+
         </ul>
     </div>
 
@@ -126,10 +147,17 @@ $tempDate = new DateTime($row["time_added"]);
                 <textarea type="text" class="uk-textarea uk-width-1-1 width-full" rows="5" cols="6" maxlength="500" placeholder="Give a short description..."  name="actions"><?php echo $row["action_arr"] ?></textarea>
             </label>
             <hr>
-            <label>
-                <h3>Youtube Link</h3>
-                <input type="text" class="uk-input uk-width-1-2" placeholder="Youtube link..."  name="link" value="<?php echo $row["link"] ?>">
-            </label>
+            <div class="uk-flex uk-width-1-1">
+                <label>
+                    <h3>Youtube Link</h3>
+                    <input type="text" class="uk-input uk-width-large" placeholder="Youtube video ID..."  name="link" value="<?php echo $row["link"] ?>">
+                </label>
+
+                <label class="uk-margin-left">
+                    <h3>Location name</h3>
+                    <input type="text" class="uk-input uk-width-large" placeholder="Give a location name..."  name="map_loc"  value="<?php echo $row["map_loc"] ?>">
+                </label>
+            </div>
             <hr>
 
             <input type="text" class="uk-invisible" value="<?php echo $row["id"] ?>" name="id">
